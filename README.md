@@ -85,7 +85,7 @@ Place your legally dumped Xbox 360 disc image in the same directory:
 Launch `ttt2_setup.exe` included in the release folder:
 - The installer GUI will open automatically.
 - Select your ISO file when prompted.
-- The installer will unpack all 54 data containers, extract the game filesystem into `game/`, apply Title Update 3, and verify checksum integrity.
+- The installer will unpack all 42 data containers (numbered up to `data053.bin`), extract the game filesystem into `game/`, apply Title Update 3, and verify checksum integrity.
 
 ### 5. Launch and Play
 Double-click `Tekken Tag Tournament 2.exe` to launch the game. On the first launch, shader compilation will complete in 20 to 60 seconds; subsequent launches will start instantly.

@@ -2,8 +2,8 @@
 # Validates release integrity and creates a distributable zip archive
 
 param(
-    [string]$SourceDir = "C:\Users\suraj\Downloads\TTT2\Tekken Tag Tournament 2 - PC Release",
-    [string]$OutputDir = "C:\Users\suraj\Downloads\TTT2\Distributable_Archives"
+    [string]$SourceDir = (Join-Path (Split-Path -Parent (Split-Path -Parent $PSScriptRoot)) "Tekken Tag Tournament 2 - PC Release"),
+    [string]$OutputDir = (Join-Path (Split-Path -Parent (Split-Path -Parent $PSScriptRoot)) "Distributable_Archives")
 )
 
 Write-Host "Starting release packaging process..."

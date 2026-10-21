@@ -3,8 +3,8 @@
 # Distributes only the compiled launcher, installer, and runtime binaries without proprietary game assets.
 
 param(
-    [string]$RootWorkspace = "C:\Users\suraj\Downloads\TTT2",
-    [string]$OutputDir = "C:\Users\suraj\Downloads\TTT2\Distributable_Archives"
+    [string]$RootWorkspace = (Split-Path -Parent (Split-Path -Parent $PSScriptRoot)),
+    [string]$OutputDir = (Join-Path (Split-Path -Parent (Split-Path -Parent $PSScriptRoot)) "Distributable_Archives")
 )
 
 Write-Host "Building GitHub Releases asset package..."

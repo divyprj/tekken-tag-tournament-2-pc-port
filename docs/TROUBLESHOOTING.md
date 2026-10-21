@@ -48,7 +48,7 @@ The game window opens but displays only a black frame without progressing to the
 
 ### Common Causes and Fixes
 1. Missing Game Data:
-   Verify that all 54 data containers (`data000.bin` through `data053.bin`) and `tekken.img` exist in the `game/` folder.
+   Verify that all 42 data containers (`data000.bin` through `data053.bin`) and `tekken.img` exist in the `game/` folder.
 2. Missing Visual C++ Runtimes:
    Ensure `msvcp140.dll` and `vcruntime140.dll` are present in the root folder alongside the executable.
 3. Corrupted User Cache:
