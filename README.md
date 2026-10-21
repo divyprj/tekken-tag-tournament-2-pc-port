@@ -30,6 +30,7 @@
 - [Controls and Multiplayer](#controls-and-multiplayer)
 - [Strict Anti-Piracy and Fair Use Declaration](#strict-anti-piracy-and-fair-use-declaration)
 - [Troubleshooting and Helper Tools](#troubleshooting-and-helper-tools)
+- [Credits and Upstream Authors](#credits-and-upstream-authors)
 - [Applied Licenses and Third-Party Notices](#applied-licenses-and-third-party-notices)
 
 ---
@@ -37,6 +38,8 @@
 ## Overview
 
 **Tekken Tag Tournament 2 PC Port** is an unofficial, native x86_64 DirectX 11 port of the acclaimed 2012 fighting game for modern 64-bit Windows systems.
+
+This repository serves as a curated, standalone distribution bundle, packaging automation pipeline, and configuration wrapper based on the open-source static recompilation port by **shihabal3amri** and the **XenonRecomp** project.
 
 Unlike traditional emulation layers that incur substantial CPU overhead, this project executes statically recompiled machine code natively on modern x86_64 processors. DirectX 11 hardware acceleration delivers locked 60 FPS performance, pristine frame pacing, minimal input latency, and full support for both competitive keyboard layouts and modern game controllers.
 
@@ -160,6 +163,26 @@ All helper scripts are located in the `tools/` directory to keep the root direct
   If visual artifacts occur after a GPU driver update, delete `%LOCALAPPDATA%\TTT2Recomp\shadercache\` and restart the game.
 
 For further solutions, consult [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
+
+---
+
+## Credits and Upstream Authors
+
+This distribution builds upon the foundational achievements of open-source reverse engineers and recompilation pioneers. Sincere credit and acknowledgment belong to:
+
+- **Shihab Al-Amri ([shihabal3amri](https://github.com/shihabal3amri)):**
+  Lead creator and developer of the [Tekken Tag Tournament 2 PC Port](https://github.com/shihabal3amri/tekken-tag-tournament-2-pc). Implemented the native static recompilation architecture, memory patches, asset extraction pipeline (`ttt2_setup.exe`), and DirectX 11 runtime integration.
+- **hedge-dev:**
+  Creator and maintainer of [XenonRecomp](https://github.com/hedge-dev/XenonRecomp), the open-source Xbox 360 binary recompiler that enables translating PowerPC instructions into native x86_64 C++ code. Also author of [UnleashedRecomp](https://github.com/hedge-dev/UnleashedRecomp).
+- **The Xenia Project Team:**
+  Developers of the [Xenia Xbox 360 Emulator](https://github.com/xenia-project/xenia). Their reverse-engineering of the Xbox 360 kernel, audio processing, and GPU microcode provided the essential reference foundation for modern recompilations.
+- **Third-Party Open-Source Libraries:**
+  - **FFmpeg (LGPL):** Multi-channel XMA audio decoding and streaming.
+  - **libmspack (LGPL):** LZX disc container decompression.
+  - **tiny-AES-c:** Title update asset decryption.
+  - **Valve Corporation:** Steamworks SDK (`steam_api64.dll`) for peer-to-peer multiplayer interoperability.
+- **Bandai Namco Entertainment Inc.:**
+  Original developers and copyright holders of Tekken Tag Tournament 2. All rights, characters, assets, and game code belong to Bandai Namco Entertainment Inc.
 
 ---
 

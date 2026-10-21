@@ -148,6 +148,14 @@ TROUBLESHOOTING:
 - Reset save data:
   Run 'tools\Reset_Save_Data.bat' to wipe local played records and start fresh.
 
+--------------------------------------------------------------------------------
+CREDITS & ACKNOWLEDGMENTS:
+--------------------------------------------------------------------------------
+- Shihab Al-Amri (shihabal3amri): Lead developer of the TTT2 PC port project.
+- hedge-dev: Creator of XenonRecomp (Xbox 360 binary recompiler).
+- The Xenia Project: Foundational Xbox 360 emulation reverse engineering.
+- Bandai Namco Entertainment Inc.: Original game creators and copyright owners.
+
 For full documentation and updates, visit the GitHub repository.
 ================================================================================
 "@
