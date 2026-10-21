@@ -1,0 +1,32 @@
+# Game Data Containers and Binaries
+*.iso
+*.7z
+*.zip
+*.bin
+*.img
+*.xex
+*.ofs
+game/
+data*/
+
+# Saves and User Configuration
+*.ini
+saves/
+shadercache/
+log.txt
+*.log
+
+# Build Artifacts
+build/
+bin/
+obj/
+*.tmp
+*.bak
+test_patch.exe
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store

@@ -1,0 +1,40 @@
+name: Repository Integrity Validation
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify repository structure
+        shell: pwsh
+        run: |
+          $required = @(
+            "README.md",
+            "LICENSE",
+            "DISCLAIMER.md",
+            "RELEASE_NOTES.md",
+            "docs/CONTROLS.md",
+            "docs/MULTIPLAYER.md",
+            "docs/TROUBLESHOOTING.md",
+            "scripts/package_release.ps1",
+            "scripts/build_github_release_zip.ps1"
+          )
+          $missing = @()
+          foreach ($file in $required) {
+            if (-not (Test-Path $file)) {
+              $missing += $file
+            }
+          }
+          if ($missing.Count -gt 0) {
+            Write-Error "Missing required files: $($missing -join ', ')"
+            exit 1
+          }
+          Write-Host "All required repository files verified successfully."
