@@ -48,7 +48,7 @@ Unlike traditional emulation layers that incur substantial CPU overhead, this pr
 - **Complete 59-Fighter Roster:** All characters, console DLC fighters, and bonus transformations unlocked by default.
 - **Multi-Input Competitive Architecture:** Native Tekken 7 keyboard mapping (WASD movement, U/I/J/K buttons, O for Tag), standard XInput gamepad detection, and DirectInput support.
 - **Comprehensive 2-Player Local Multiplayer:** Seamless simultaneous play across two controllers, one controller and one keyboard, or two players sharing a single keyboard.
-- **Zero Proprietary Data Distribution:** Follows the established SpartanPort distribution standard: releases distribute only runtime binaries, while user assets are extracted from legally owned disc dumps.
+- **Zero Proprietary Data Distribution:** Releases distribute only runtime binaries, while user assets are extracted from legally owned disc dumps.
 - **Isolated User Storage:** Saves, profiles, and shader caches persist cleanly in `%LOCALAPPDATA%\TTT2Recomp\`.
 
 ---
@@ -60,7 +60,7 @@ Unlike traditional emulation layers that incur substantial CPU overhead, this pr
 | **Operating System** | Windows 10 (64-bit, Version 1903+) | Windows 10 / 11 (64-bit, latest build) |
 | **Processor** | Intel Core i5 (4th Gen) / AMD FX-8350 | Intel Core i5 (10th Gen+) / AMD Ryzen 5 3600+ |
 | **Memory** | 8 GB RAM | 16 GB Dual-Channel RAM |
-| **Graphics** | NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 | NVIDIA GeForce GTX 1660 / RTX 3050 or higher |
+| **Graphics** | NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 | NVIDIA GeForce GTX 1660 / RTX 2060 or higher |
 | **DirectX** | Version 11 Feature Level 11_0 | Version 11 Feature Level 11_1 |
 | **Storage** | 15 GB available space | 15 GB SSD storage |
 | **Input** | Standard USB Keyboard | Xbox Wireless Controller / DualShock 4 / Fight Stick |
@@ -70,7 +70,7 @@ Unlike traditional emulation layers that incur substantial CPU overhead, this pr
 ## Download and Quick Start
 
 ### 1. Download the Release Bundle
-Download `Tekken_Tag_Tournament_2_PC_v0.1.6_GitHub_Release.zip` (31.37 MB) from the [Releases Page](https://github.com/divyprj/tekken-tag-tournament-2-pc-port/releases/tag/v0.1.6).
+Download `Tekken_Tag_Tournament_2_PC_v0.1.6_GitHub_Release.zip` (31.41 MB) from the [Releases Page](https://github.com/divyprj/tekken-tag-tournament-2-pc-port/releases/tag/v0.1.6).
 
 ### 2. Extract the Package
 Extract the downloaded zip archive to your preferred game directory (for example, `C:\Games\TTT2`).
@@ -94,7 +94,7 @@ Double-click `Tekken Tag Tournament 2.exe` to launch the game. On the first laun
 
 ## Technical Architecture
 
-This port adopts the modular systems design inspired by the SpartanPort model:
+This port adopts a modular systems design:
 
 | Subsystem | Location | Technical Function |
 |---|---|---|

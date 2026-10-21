@@ -1,5 +1,4 @@
 # Script to build the official GitHub Release asset package
-# Adheres to the SpartanPort open-source distribution model:
 # Distributes only the compiled launcher, installer, and runtime binaries without proprietary game assets.
 
 param(
@@ -74,7 +73,7 @@ $installGuidePath = Join-Path $stageDir "INSTALL_GUIDE.txt"
 $installGuideContent = @"
 ================================================================================
 TEKKEN TAG TOURNAMENT 2 - PC PORT INSTALLATION GUIDE
-Open-Source Preservation Distribution (SpartanPort Model)
+Open-Source Preservation Distribution
 ================================================================================
 
 PREREQUISITES:

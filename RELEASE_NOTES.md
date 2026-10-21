@@ -1,6 +1,6 @@
 # Release Notes: Tekken Tag Tournament 2 PC Port (Version 0.1.6)
 
-This release implements a native x86_64 DirectX 11 PC port of Tekken Tag Tournament 2 for modern Windows systems, distributed using the SpartanPort open-source distribution model.
+This release implements a native x86_64 DirectX 11 PC port of Tekken Tag Tournament 2 for modern Windows systems, distributed using an open-source fan preservation model.
 
 No proprietary game assets or copyrighted containers are bundled in this release. Users must supply their own legally dumped Xbox 360 game disc image (ISO) to extract the game assets.
 
@@ -51,7 +51,7 @@ No proprietary game assets or copyrighted containers are bundled in this release
 
 | File | Size | SHA-256 Checksum |
 |---|---|---|
-| `Tekken_Tag_Tournament_2_PC_v0.1.6_GitHub_Release.zip` | 31.41 MB | `0F170D7F2F4545DC79B46AB044DB65396ED1C9181C59997A7F70A0C29ADD1954` |
+| `Tekken_Tag_Tournament_2_PC_v0.1.6_GitHub_Release.zip` | 31.41 MB | `0EA558AB4613BE8A1D21241B908978DC023D7EA2D93FD2B37B1A51F17ABD3388` |
 | `Tekken Tag Tournament 2.exe` | 61.04 MB | `D8AD223398C989D60D2B929DC175C7C54AAE63466CFD6BBCFF032DC81398CC80` |
 | `ttt2_setup.exe` | 62.45 MB | `068B5CFCB4B5406284CED3D8927737EE8617836F1F8B4865A7AA6462D1AD18E5` |
 
