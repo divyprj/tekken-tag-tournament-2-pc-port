@@ -67,15 +67,6 @@ No proprietary game assets or copyrighted containers are bundled in this release
 
 ---
 
-## Project Leadership and Credits
-
-- **Divyansh Prajapati ([@divyprj](https://github.com/divyprj)):** Project Lead, Release Engineering, Input System Polish, Windows 11 Runtime Integration, and Packaging Architecture.
-- **Shihab Al-Amri ([@shihabal3amri](https://github.com/shihabal3amri)):** Static recompilation translation layer and PC runtime foundations.
-- **Felipe Prado ([@FelipePrado0](https://github.com/FelipePrado0)):** SpartanPort reference model and open-source documentation standards.
-- **Bandai Namco Entertainment Inc.:** Original intellectual property and game creation.
-
----
-
 ## Legal and Strict Anti-Piracy Notice
 
 Tekken Tag Tournament 2 is a trademark and copyright of Bandai Namco Entertainment Inc. This project is a non-commercial, open-source preservation initiative. No proprietary game assets, media files, or copyrighted code are distributed in this repository or its release packages. This project does not promote or endorse piracy. All players must supply assets extracted directly from their own legally dumped retail disc image.

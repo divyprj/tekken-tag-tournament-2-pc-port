@@ -30,7 +30,6 @@
 - [Controls and Multiplayer](#controls-and-multiplayer)
 - [Strict Anti-Piracy and Fair Use Declaration](#strict-anti-piracy-and-fair-use-declaration)
 - [Troubleshooting and Helper Tools](#troubleshooting-and-helper-tools)
-- [Credits and Leadership](#credits-and-leadership)
 - [Applied Licenses and Third-Party Notices](#applied-licenses-and-third-party-notices)
 
 ---
@@ -161,24 +160,6 @@ All helper scripts are located in the `tools/` directory to keep the root direct
   If visual artifacts occur after a GPU driver update, delete `%LOCALAPPDATA%\TTT2Recomp\shadercache\` and restart the game.
 
 For further solutions, consult [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
-
----
-
-## Credits and Leadership
-
-### Project Lead and Engineering
-- **Divyansh Prajapati ([@divyprj](https://github.com/divyprj)):**
-  Lead project maintainer, release architect, packaging engineering, multi-input system redesign, Windows 11 runtime integration, documentation authoring, and quality assurance.
-
-### Upstream and Architectural Acknowledgments
-- **Shihab Al-Amri ([@shihabal3amri](https://github.com/shihabal3amri)):**
-  Original static recompilation translation layer and native PC runtime foundations for Tekken Tag Tournament 2.
-- **Felipe Prado ([@FelipePrado0](https://github.com/FelipePrado0)):**
-  Reference architecture and open-source distribution model established in the SpartanPort project.
-- **Bandai Namco Entertainment Inc.:**
-  Original game design, art direction, sound engineering, and development of the Tekken franchise.
-- **Xbox 360 Reverse Engineering Community:**
-  Pioneering static recompilation research, PowerPC instruction mapping, and Direct3D translation tooling.
 
 ---
 
