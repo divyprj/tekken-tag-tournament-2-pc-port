@@ -43,7 +43,7 @@ Modeled after modern static recompilation efforts such as SpartanPort.
 ### Playing Pre-Packaged Releases
 1. Download the release archive from the Releases section.
 2. Extract the contents to any folder on your PC.
-3. Launch `Play_Tekken_Tag_Tournament_2.bat` or `Tekken Tag Tournament 2.exe`.
+3. Launch `Tekken Tag Tournament 2.exe`.
 
 ### Building from Your Own Game Copy
 To build the native binary using your legally owned disc image:
@@ -112,7 +112,7 @@ Windows 11 includes Smart App Control (SAC), which blocks newly compiled open-so
 
 ### Restoring Smart App Control
 To restore Smart App Control to evaluation mode without reinstalling Windows:
-1. Run `Restore_Smart_App_Control.bat` as administrator.
+1. Run `tools\Restore_Smart_App_Control.bat` as administrator.
 2. Restart your computer.
 
 Refer to `docs/TROUBLESHOOTING.md` for comprehensive troubleshooting information.

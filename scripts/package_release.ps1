@@ -20,8 +20,10 @@ $requiredFiles = @(
     "msvcp140.dll",
     "vcruntime140.dll",
     "icon.ico",
-    "Play_Tekken_Tag_Tournament_2.bat",
+    "settings.ini",
     "README.txt",
+    "tools\Reset_Save_Data.bat",
+    "tools\Restore_Smart_App_Control.bat",
     "game\Default.xex",
     "game\tekken.img"
 )

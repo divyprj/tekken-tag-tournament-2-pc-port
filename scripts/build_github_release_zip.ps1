@@ -41,9 +41,7 @@ $binaries = @(
     "vcruntime140_1.dll",
     "icon.ico",
     "settings.ini",
-    "Play_Tekken_Tag_Tournament_2.bat",
-    "Restore_Smart_App_Control.bat",
-    "Reset_Save_Data.bat"
+    "README.txt"
 )
 
 foreach ($b in $binaries) {
@@ -51,6 +49,23 @@ foreach ($b in $binaries) {
     if (Test-Path $src) {
         Copy-Item $src -Destination $stageDir
         Write-Host "Added $b"
+    }
+}
+
+# Create tools subfolder in staging
+$stageTools = Join-Path $stageDir "tools"
+New-Item -ItemType Directory -Path $stageTools -Force | Out-Null
+
+$toolFiles = @(
+    "Reset_Save_Data.bat",
+    "Restore_Smart_App_Control.bat"
+)
+
+foreach ($t in $toolFiles) {
+    $srcTool = Join-Path $releaseSource "tools\$t"
+    if (Test-Path $srcTool) {
+        Copy-Item $srcTool -Destination $stageTools
+        Write-Host "Added tools\$t"
     }
 }
 
@@ -87,7 +102,7 @@ STEP-BY-STEP SETUP:
      this zip to ensure custom title bar branding and latest input latency fixes.
 
 4. Launch the game:
-   - Double-click 'Play_Tekken_Tag_Tournament_2.bat' or 'Tekken Tag Tournament 2.exe'.
+   - Double-click 'Tekken Tag Tournament 2.exe'.
    - First launch will compile shaders (20 to 60 seconds). Subsequent launches
      will open instantly.
 
@@ -124,7 +139,7 @@ Player 2 (Shared Keyboard):
 TROUBLESHOOTING:
 --------------------------------------------------------------------------------
 - Windows 11 Smart App Control (Error 0xc0e90002):
-  Run 'Restore_Smart_App_Control.bat' as Administrator if Smart App Control blocks
+  Run 'tools\Restore_Smart_App_Control.bat' as Administrator if Smart App Control blocks
   execution.
 - Black screen on startup:
   Wait 60 seconds for DirectX 11 shader pipelines to compile.
@@ -132,7 +147,7 @@ TROUBLESHOOTING:
   Install the latest Microsoft Visual C++ Redistributable (x64) from Microsoft:
   https://aka.ms/vs/17/release/vc_redist.x64.exe
 - Reset save data:
-  Run 'Reset_Save_Data.bat' to wipe local played records and start fresh.
+  Run 'tools\Reset_Save_Data.bat' to wipe local played records and start fresh.
 
 For full documentation and updates, visit the GitHub repository.
 ================================================================================

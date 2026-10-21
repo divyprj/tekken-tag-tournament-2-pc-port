@@ -22,7 +22,7 @@ Windows 11 includes an enterprise-derived feature called Smart App Control (SAC)
 
 ### Re-Enabling Smart App Control without Reinstalling Windows
 Microsoft states in their UI that disabling Smart App Control requires an operating system reinstall to re-enable. This restriction applies only to the user interface toggle. To restore Smart App Control to Evaluation Mode:
-1. Right-click `Restore_Smart_App_Control.bat` and select `Run as administrator`.
+1. Right-click `tools\Restore_Smart_App_Control.bat` and select `Run as administrator`.
 2. This script writes `VerifiedAndReputablePolicyState = 2` to `HKLM\SYSTEM\CurrentControlSet\Control\CI\Policy`.
 3. Restart your computer. Smart App Control will be active upon reboot.
 
@@ -82,7 +82,7 @@ To toggle between windowed mode and fullscreen at any time:
 The game loads previous play records, old ghost battle ratings, or custom profiles, and you wish to start from a clean slate.
 
 ### Fix
-Run `Reset_Save_Data.bat` in the root folder.
+Run `tools\Reset_Save_Data.bat`.
 Alternatively, manually delete the contents of:
 `%LOCALAPPDATA%\TTT2Recomp\saves\`
 
