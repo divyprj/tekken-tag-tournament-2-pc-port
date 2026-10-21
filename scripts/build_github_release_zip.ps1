@@ -42,7 +42,8 @@ $binaries = @(
     "icon.ico",
     "settings.ini",
     "Play_Tekken_Tag_Tournament_2.bat",
-    "Restore_Smart_App_Control.bat"
+    "Restore_Smart_App_Control.bat",
+    "Reset_Save_Data.bat"
 )
 
 foreach ($b in $binaries) {
@@ -130,6 +131,8 @@ TROUBLESHOOTING:
 - Missing DLL errors:
   Install the latest Microsoft Visual C++ Redistributable (x64) from Microsoft:
   https://aka.ms/vs/17/release/vc_redist.x64.exe
+- Reset save data:
+  Run 'Reset_Save_Data.bat' to wipe local played records and start fresh.
 
 For full documentation and updates, visit the GitHub repository.
 ================================================================================

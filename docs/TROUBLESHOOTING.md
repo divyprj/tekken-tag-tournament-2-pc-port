@@ -73,3 +73,17 @@ Buttons on an attached gamepad produce no response in-game.
 To toggle between windowed mode and fullscreen at any time:
 - Press `Alt + Enter` on your keyboard.
 - Or navigate to `OPTIONS > DISPLAY SETTINGS` in the main menu to select your display mode (Windowed, Borderless Fullscreen, Exclusive Fullscreen) and internal rendering resolution (1080p, 1440p, 4K).
+
+---
+
+## 6. Resetting Save Data and User Profile Records
+
+### Symptom
+The game loads previous play records, old ghost battle ratings, or custom profiles, and you wish to start from a clean slate.
+
+### Fix
+Run `Reset_Save_Data.bat` in the root folder.
+Alternatively, manually delete the contents of:
+`%LOCALAPPDATA%\TTT2Recomp\saves\`
+
+The next time the game boots, it will recreate a brand new user profile and clean save state.

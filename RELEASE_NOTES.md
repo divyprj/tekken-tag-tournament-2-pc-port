@@ -50,7 +50,7 @@ No proprietary game assets or copyrighted containers are bundled in this release
 
 | File | Size | SHA-256 Checksum |
 |---|---|---|
-| `Tekken_Tag_Tournament_2_PC_v0.1.6_GitHub_Release.zip` | 31.37 MB | `371912C3ADD813BBB81EFBF502AD50D231427F1485353C2F02C8A949D3FD747E` |
+| `Tekken_Tag_Tournament_2_PC_v0.1.6_GitHub_Release.zip` | 31.37 MB | `F2FEA62F6C8FEF98A1B8F3D20595F438827DB077199197BEE46CC9D190C204A0` |
 | `Tekken Tag Tournament 2.exe` | 61.04 MB | `D8AD223398C989D60D2B929DC175C7C54AAE63466CFD6BBCFF032DC81398CC80` |
 | `ttt2_setup.exe` | 62.41 MB | `2E7813B0DF639B1BB49B88EC0F30E1EE61572087FD96BED2A87250F6AC14F666` |
 
