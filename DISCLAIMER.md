@@ -17,3 +17,9 @@ This repository does not contain or distribute:
 - Proprietary BIOS or firmware code.
 
 Users are strictly required to supply their own legally purchased copy of Tekken Tag Tournament 2 for the Xbox 360 platform and Title Update 3 to extract and generate the runtime assets.
+
+## Strict Anti-Piracy Policy
+This project and its maintainers strictly oppose software piracy:
+- No unauthorized game download links, ROM repositories, or warez portals are endorsed, provided, or permitted within this project.
+- Project maintainers and contributors do not support or facilitate copyright infringement.
+- All players must supply assets extracted directly from their own legally acquired retail game disc.
