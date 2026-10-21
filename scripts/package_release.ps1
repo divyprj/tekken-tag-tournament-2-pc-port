@@ -1,66 +1,46 @@
-# Automated Packaging Script for Tekken Tag Tournament 2 PC Release
-# Validates release integrity and creates a distributable zip archive
+<#
+.SYNOPSIS
+    [DEPRECATED & DISABLED] Legacy Release Packaging Entrypoint
 
-param(
-    [string]$SourceDir = (Join-Path (Split-Path -Parent (Split-Path -Parent $PSScriptRoot)) "Tekken Tag Tournament 2 - PC Release"),
-    [string]$OutputDir = (Join-Path (Split-Path -Parent (Split-Path -Parent $PSScriptRoot)) "Distributable_Archives")
-)
+.DESCRIPTION
+    This script previously performed unconstrained workspace packaging, which risked
+    accidentally archiving proprietary, copyrighted Xbox 360 game containers
+    (Default.xex, tekken.img, data*.bin) or local configuration caches.
 
-Write-Host "Starting release packaging process..."
+    In accordance with the repository security and copyright compliance audit (AUDIT_REPORT.md),
+    this entrypoint has been permanently disabled.
 
-if (-not (Test-Path $SourceDir)) {
-    Write-Error "Source directory not found: $SourceDir"
-    exit 1
-}
+    To generate an official, sanitized distribution package containing ONLY approved
+    redistributable wrapper files, configuration templates, and documentation, use:
 
-# Verify critical files
-$requiredFiles = @(
-    "Tekken Tag Tournament 2.exe",
-    "steam_api64.dll",
-    "msvcp140.dll",
-    "vcruntime140.dll",
-    "icon.ico",
-    "settings.ini",
-    "README.txt",
-    "tools\Reset_Save_Data.bat",
-    "tools\Restore_Smart_App_Control.bat",
-    "game\Default.xex",
-    "game\tekken.img"
-)
+        powershell -ExecutionPolicy Bypass -File .\scripts\build_github_release_zip.ps1
 
-$missing = @()
-foreach ($f in $requiredFiles) {
-    $full = Join-Path $SourceDir $f
-    if (-not (Test-Path $full)) {
-        $missing += $f
-    }
-}
+.NOTES
+    Compliance Status: Deprecated / Safety Disabled
+#>
 
-if ($missing.Count -gt 0) {
-    Write-Error "Missing critical files: $($missing -join ', ')"
-    exit 1
-}
+[CmdletBinding()]
+param()
 
-# Verify data containers count
-$dataFiles = Get-ChildItem -Path (Join-Path $SourceDir "game") -Filter "data*.bin"
-Write-Host "Verified data containers count: $($dataFiles.Count)"
-if ($dataFiles.Count -lt 40) {
-    Write-Error "Incomplete data container set in game folder."
-    exit 1
-}
+Write-Error @"
+================================================================================
+CRITICAL SAFETY NOTICE: SCRIPT PERMANENTLY DISABLED
+================================================================================
+'scripts/package_release.ps1' is deprecated and intentionally disabled.
 
-if (-not (Test-Path $OutputDir)) {
-    New-Item -ItemType Directory -Path $OutputDir | Out-Null
-}
+REASON:
+Legacy recursive directory packaging can accidentally bundle proprietary,
+copyrighted game assets (such as Default.xex, tekken.img, and data*.bin)
+into public distribution archives, violating Bandai Namco intellectual property
+and project distribution rules.
 
-$dateStr = Get-Date -Format "yyyyMMdd"
-$zipPath = Join-Path $OutputDir "Tekken_Tag_Tournament_2_PC_v0.1.6_$dateStr.zip"
+APPROVED PACKAGING SCRIPT:
+Please use the hardened release packaging script instead:
+    .\scripts\build_github_release_zip.ps1
 
-Write-Host "Creating zip package at: $zipPath"
-Write-Host "Note: This may take several minutes depending on disk speed..."
+The approved script enforces an explicit allowlist, validates required binaries,
+strictly forbids proprietary game data, and generates verified SHA-256 checksums.
+================================================================================
+"@
 
-Compress-Archive -Path "$SourceDir\*" -DestinationPath $zipPath -CompressionLevel Optimal -Force
-
-$zipItem = Get-Item $zipPath
-$sizeGB = [Math]::Round($zipItem.Length / 1GB, 2)
-Write-Host "Packaging complete. Archive size: $sizeGB GB ($($zipItem.Length) bytes)."
+exit 1

@@ -1,4 +1,16 @@
-MIT License
+# Repository Licensing and Legal Notices
+
+This repository operates as an open-source distribution wrapper, configuration preset, and packaging automation pipeline for the native PC port of *Tekken Tag Tournament 2*.
+
+Because this project combines repository-specific automation, upstream compiled recompilation components, and third-party redistributables, distinct licensing terms apply to different components as set forth below.
+
+---
+
+## 1. Distribution Wrapper Scripts, Configuration, and Documentation
+
+The packaging scripts (`scripts/`), configuration templates (`config/` / `settings.ini`), diagnostic scripts (`tools/Reset_Save_Data.bat`), and documentation (`docs/`, `README.md`, `INSTALL_GUIDE.md`) authored specifically for this repository are licensed under the following terms:
+
+### MIT License (Repository Contributions)
 
 Copyright (c) 2026 Tekken Tag Tournament 2 PC Port Contributors
 
@@ -20,7 +32,46 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-NON-COMMERCIAL NOTICE:
-This project is an unofficial fan work created strictly for personal educational
-use, research, and software preservation. Commercial exploitation or resale of
-this project is prohibited.
+### Non-Commercial Software Preservation Notice (Repository Scope)
+
+This wrapper repository is maintained as an independent, non-commercial software preservation project for personal educational research and platform interoperability. No commercial exploitation, resale, or monetization of this repository or its packaged bundles is authorized or intended.
+
+---
+
+## 2. Upstream Recompilation Engine and Framework
+
+The underlying game engine runtime (`Tekken Tag Tournament 2.exe` and `ttt2_setup.exe`) is developed and maintained upstream by **Shihab Al-Amri** and powered by the **XenonRecomp** framework created by **hedge-dev**. Upstream code is licensed under the standard MIT License:
+
+- **Tekken Tag Tournament 2 PC Port Runtime:**
+  Copyright (c) 2024-2026 Shihab Al-Amri (`shihabal3amri`)
+  Repository: https://github.com/shihabal3amri/tekken-tag-tournament-2-pc
+  License: MIT License
+
+- **XenonRecomp Framework:**
+  Copyright (c) 2023-2026 hedge-dev
+  Repository: https://github.com/hedge-dev/XenonRecomp
+  License: MIT License
+
+Nothing in this repository's non-commercial wrapper policy modifies, restricts, or supersedes the rights granted by upstream copyright holders under their respective MIT licenses.
+
+---
+
+## 3. Third-Party Libraries and Runtimes
+
+Third-party dependencies bundled or referenced by this project (including Microsoft Visual C++ Redistributable runtime DLLs and the Valve Steamworks API `steam_api64.dll`) remain the property of their respective copyright holders and are governed by their original licenses.
+
+For a comprehensive inventory of all third-party components, authors, licenses, and terms, refer to:
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
+
+---
+
+## 4. Intellectual Property and Trademark Disclaimer
+
+- **Tekken Tag Tournament 2**, the *Tekken* franchise, logos, character likenesses, 3D models, textures, animations, audio recordings, dialogue, and trade dress are registered trademarks and intellectual properties of **Bandai Namco Entertainment Inc.**
+- **Microsoft**, **Xbox 360**, and **DirectX** are registered trademarks of **Microsoft Corporation**.
+- **Steam** and **Steamworks** are registered trademarks of **Valve Corporation**.
+
+This project is not affiliated with, endorsed by, sponsored by, or connected to Bandai Namco Entertainment Inc., Microsoft Corporation, or Valve Corporation.
+
+**ZERO PROPRIETARY GAME DATA IS DISTRIBUTED:**
+This repository and its distribution packages do not contain or distribute copyrighted ROMs, disc images (ISO), encrypted containers (`tekken.img`, `Default.xex`, `data*.bin`), or proprietary game assets. All game assets must be extracted by the end user from their own legally dumped, retail Xbox 360 media.
